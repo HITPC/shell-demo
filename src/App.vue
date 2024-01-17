@@ -33,8 +33,8 @@
       // 模板字符串需要处理一下才能带着换行展示到页面上
       // 但是之前我那俩，一个是alert里，一个是md编辑器里，好像都可以直接展示，应该是和输出环境是有关系的。
       value: `Hi there!🙂 Welcome to use this shell! Input commands below👇 to use this! 
-      If you don't know what commands you can use, please type help then Enter to view the command list! 
-      Build with Vue3 & Vite. 
+      If you don't know what commands you can use, please type [help] then type [Enter] to view the command list! 
+      🛠Build with Vue3 & Vite. 
       `
     },
     // 但是这里的问题有点大，好像一个Input是行不通的，可能需要多个，然后通过空格来什么切一下
@@ -71,4 +71,67 @@
 
 <style scoped>
 
+  /* 整体终端框 */
+  .shell-main-container{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin: 1vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  .shell-main-item span::selection, 
+  .shell-main-item span::-moz-selection, 
+  .shell-main-item span::-webkit-selection{
+    background-color: rgba(62, 139, 254, 0.6);
+  }
+
+  /* 命令头文字部分的样式 */
+  .cmd-main-part-text{
+    color: var(--cmd-main-font-color);
+  }
+
+  /* 命令修饰文字部分的样式 */
+  .cmd-decoration-part-text{
+    color: var(--cmd-decoration-font-color);
+  }
+
+  /* 命令那几个符号文字后面的样式 */
+  .cmd-symbol-part-text{
+    color: var(--cmd-symbol-font-color);
+  }
+
+  /* 错误出现时的颜色 */
+  .cmd-error-part-text{
+    color: var(--cmd-error-font-color);
+  }
+
+  /* 每一项shell */
+  .shell-main-item{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 5px;
+  }
+
+  .shell-main-left-arrow{
+    padding-top: 3px;
+    margin-right: 1%;
+    user-select: none;
+  }
+
+  .shell-input{
+    border: none;
+    outline: none;
+    padding-top: 3px;
+    width: 100%;
+    color: var(--main-font-color);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Cascadia Code SemiBold', 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+  }
 </style>
