@@ -6,7 +6,7 @@
   /* 命令装饰符的颜色 */
   --cmd-decoration-font-color: rgba(39, 39, 39, .5);
   /* 命令头的文字颜色 */
-  --cmd-main-font-color: rgb(179, 0, 250);
+  --cmd-head-font-color: rgb(179, 0, 250);
   /* @ # %符号后面文字的颜色 */
   --cmd-symbol-font-color: rgb(0, 148, 0);
   /* 出错误的颜色 */
