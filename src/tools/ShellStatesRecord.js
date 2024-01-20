@@ -3,24 +3,22 @@ import { HEAD, HANDLETYPE, DECORATION, TARGET, SYMBOL, INIT } from "../consts/In
 class ShellStatesRecords{
   constructor(){
     this.records = [INIT, HEAD];
-    this.stateNow = this.getStateNow();
-    this.stateLast = this.getStateLast();
   }
 
-  getStateNow(){
+  getNowState(){
     return this.records[this.records.length - 1];
   }
 
-  getStateLast(){
+  getLastState(){
     if(this.records.length < 2){
-      throw new Error('错误的records长度');
+      throw new Error('value-错误的records长度');
     }
     return this.records[this.records.length - 2];
   }
 
   /**
    * 状态加入
-   * @param {string} state 要加入的状态
+   * @param {string} state 要加入的状态对象
    */
   pushState(state){
     const whiteStates = [HEAD, TARGET, DECORATION, HANDLETYPE, SYMBOL];

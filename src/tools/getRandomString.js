@@ -23,8 +23,8 @@ export default function getRandomStirng(length = 8, mix = true, onlyUpper = fals
   if(mix){// 混杂大小写
     let bigOrLess;
     for(let i = 0; i < length; ++i){
-      bigOrLess = getRandomNumber(0, 1);
-      if(bigOrLess === 1){
+      bigOrLess = getRandomNumber(0, 3);
+      if(bigOrLess <= 1){
         res += lowerCase[getRandomNumber(0, 25)];
       }else{
         res += upperCase[getRandomNumber(0, 25)];
