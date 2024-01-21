@@ -3,8 +3,6 @@ export const INIT = 'INIT';
 
 export const HEAD = 'HEAD';
 
-export const HANDLETYPE = 'HANDLETYPE';
-
 export const TARGET = 'TARGET';
 
 export const DECORATION = 'DECORATION';

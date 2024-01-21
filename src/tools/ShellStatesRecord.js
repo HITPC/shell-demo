@@ -1,4 +1,4 @@
-import { HEAD, HANDLETYPE, DECORATION, TARGET, SYMBOL, INIT } from "../consts/InputStates"
+import { HEAD, DECORATION, TARGET, SYMBOL, INIT } from "../consts/InputStates"
 
 class ShellStatesRecords{
   constructor(){
@@ -21,7 +21,7 @@ class ShellStatesRecords{
    * @param {string} state 要加入的状态对象
    */
   pushState(state){
-    const whiteStates = [HEAD, TARGET, DECORATION, HANDLETYPE, SYMBOL];
+    const whiteStates = [HEAD, TARGET, DECORATION, SYMBOL];
     if(whiteStates.includes(state)){
       this.records.push(state);
     }else{

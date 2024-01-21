@@ -47,4 +47,5 @@ html, body{
   font-size: max(1.2vw, 1rem);
   font-weight: 500;
   font-family: 'Cascadia Code SemiBold', 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+  transition: all .6s;
 }

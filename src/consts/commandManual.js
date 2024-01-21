@@ -1,0 +1,3 @@
+export default function getCommandManual(){
+  return `<ul class="cmd-SYMBOL-part-text"><li>[help]: To find help.</li><li>[changetheme [xxx]]: To change dark or light mode. The value of xxx can be selected from 'dark' and 'light', and can be switched to night mode and day mode, respectively. Or you can just let it empty, if empty, shell will switch the mode to the opposite of the current one.</li><li>[about]: View the introduction of this shell.</li><li>[aboutme]: View the introduction of the author.</li><li>[compute a b -xx]: Obtain the result of calculating in xx for a and b, where xx takes values from add, subtract, multiply, and divide. In addition, a and b must be numbers.</li></ul>`
+}
